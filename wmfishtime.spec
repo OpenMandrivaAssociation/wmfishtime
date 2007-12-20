@@ -50,11 +50,15 @@ install -m 755 wmfishtime $RPM_BUILD_ROOT%{_bindir}/
 mkdir -p $RPM_BUILD_ROOT%{_mandir}/man1/
 bzip2 -9 -c wmfishtime.1 > $RPM_BUILD_ROOT%{_mandir}/man1/wmfishtime.1.bz2
 
-install -m 755 -d $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="%{_bindir}/%{name} -b" icon="%{name}.png"\\
-                 needs="X11" section="Applications/Monitoring" title="WmFishTime"\\
-                 longtitle="Analog clock in a tank fish"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_bindir}/%{name} -b
+Icon=%{name}
+Categories=System;Monitor;
+Name=WmFishTime
+Comment=Analog clock in a tank fish
 EOF
 
 
@@ -79,6 +83,6 @@ EOF
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 %attr(644,root,man) %{_mandir}/man1/*
 
