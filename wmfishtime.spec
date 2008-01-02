@@ -13,6 +13,7 @@ Source1:	%{name}-icons.tar.bz2
 URL:		http://www.ne.jp/asahi/linux/timecop/
 BuildRequires:	gtk-devel
 # Prefix:		/usr/X11R6
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 Well, this is just your standard time dockapp. Top part has the clock face,
