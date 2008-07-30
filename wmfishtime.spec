@@ -1,5 +1,5 @@
 %define version 1.24
-%define release %mkrel 1
+%define release %mkrel 3
 %define name wmfishtime
 
 Summary:	Analog clock with background fish tank in a dockapp
