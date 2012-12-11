@@ -91,3 +91,51 @@ EOF
 %{_datadir}/applications/mandriva-%{name}.desktop
 %attr(644,root,man) %{_mandir}/man1/*
 
+
+
+%changelog
+* Wed Sep 09 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.24-5mdv2010.0
++ Revision: 434855
+- rebuild
+
+* Sun Aug 03 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.24-4mdv2009.0
++ Revision: 262051
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.24-3mdv2009.0
++ Revision: 256140
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Thu Dec 20 2007 Thierry Vignaud <tvignaud@mandriva.com> 1.24-1mdv2008.1
++ Revision: 135466
+- auto-convert XDG menu entry
+- kill re-definition of %%buildroot on Pixel's request
+- import wmfishtime
+
+
+* Fri Jul 22 2005 Nicolas Lécureuil <neoclust@mandriva.org> 1.24-1mdk
+- New release 1.24
+
+* Thu Jun 02 2005 Nicolas Lécureuil <neoclust@mandriva.org> 1.23-5mdk
+- Rebuild
+
+* Tue Nov 25 2003 Marcel Pol <mpol@mandrake.org> 1.23-4mdk
+- buildrequires
+- remove redundant (build)requires
+
+* Fri Jun 21 2002 Olivier Thauvin <thauvin@aerov.jussieu.fr> 1.23-3mdk
+- fix menu command entry (I am stupid)
+
+* Fri Jun 21 2002 Olivier Thauvin <thauvin@aerov.jussieu.fr> 1.23-2mdk
+- png icons (out xpm!)
+- s/Copyrigth/License/
+- %%{_prefix} = /usr
+
+* Fri Jun 08 2001 HA Quôc-Viêt <viet@mandrakesoft.com> 1.23-1mdk
+- Initial packaging.
